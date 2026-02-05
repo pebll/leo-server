@@ -31,8 +31,8 @@ services:
     ports:
       - "127.0.0.1:5232:5232"
     volumes:
-      - ./data:/data
-      - ./config:/config:ro
+      - ./radicale/data:/data
+      - ./radicale/config:/config:ro
     security_opt:
       - no-new-privileges:true
     cap_drop:
