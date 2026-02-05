@@ -3,7 +3,7 @@ name: Deploy to Léo Server (bwcloud VM)
 on:
   push:
     branches:
-      - feature/leo_website
+      - main
 
 jobs:
   deploy:
@@ -16,6 +16,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd ~/minimalserver
+            cd ~/leo-server
             git pull
             docker compose up --build -d
