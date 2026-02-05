@@ -24,6 +24,27 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
     networks:
       - backend
+  radicale:
+    image: tomsquest/docker-radicale
+    container_name: radicale-service
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5232:5232"
+    volumes:
+      - ./data:/data
+      - ./config:/config:ro
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+      - KILL
+    pids_limit: 50
+    mem_limit: 256M
+
 volumes:
   caddy-config:
   caddy-data:

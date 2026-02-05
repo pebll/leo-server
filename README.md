@@ -14,7 +14,7 @@ TODO
 The server runs on Port 5232
 
 User: pebll
-Password: lel
+Password: lel (temporary)
 
 ### Setup steps ran on server:
 

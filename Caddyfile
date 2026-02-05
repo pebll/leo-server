@@ -1,12 +1,8 @@
-xn--lo-bja.com {
+léo.com {
+  reverse_proxy uvicorn-service:8000
+}
 
-  handle {
-    reverse_proxy uvicorn-service:8000
-  }
-
-  handle /radicale/* {
-    uri strip_prefix /radicale
-    reverse_proxy 127.0.0.1:5232
-  }
+léo.com {
+  reverse_proxy radicale-service:5232
 }
 
