@@ -1,6 +1,12 @@
 xn--lo-bja.com {
+
   handle {
     reverse_proxy uvicorn-service:8000
+  }
+
+  handle /radicale/* {
+    uri strip_prefix /radicale
+    reverse_proxy 127.0.0.1:5232
   }
 }
 
