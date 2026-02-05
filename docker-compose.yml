@@ -1,0 +1,31 @@
+services:
+  uvicorn-service:
+    container_name: uvicorn-container
+    build:
+      context: .
+      network: host
+      dockerfile: Dockerfile
+    volumes:
+      - ~/minimalserver:/server
+    ports:
+      - '8000:8000'
+    networks:
+      - backend
+  reverse-proxy-service:
+    container_name: reverse-proxy-container
+    image: caddy
+    restart: always
+    ports:
+      - '80:80' # http
+      - '443:443' # https
+    volumes:
+      - caddy-config:/config
+      - caddy-data:/data
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - backend
+volumes:
+  caddy-config:
+  caddy-data:
+networks: 
+  backend: {}

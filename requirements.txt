@@ -1,0 +1,6 @@
+# server connection requirements
+uvicorn
+fastapi
+# api communication reqs
+pydantic
+python-multipart
