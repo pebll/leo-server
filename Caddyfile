@@ -1,7 +1,6 @@
-xn--lo-bja.com:443 {
+xn--lo-bja.com {
+  handle {
     reverse_proxy uvicorn-service:8000
+  }
 }
 
-xn--lo-bja.com:80 {
-    reverse_proxy uvicorn-service:8000
-}
