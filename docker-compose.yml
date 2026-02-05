@@ -44,6 +44,8 @@ services:
       - KILL
     pids_limit: 50
     mem_limit: 256M
+    networks:
+      - backend
 
 volumes:
   caddy-config:

@@ -2,7 +2,7 @@ léo.com {
   reverse_proxy uvicorn-service:8000
 }
 
-léo.com {
+radicale.léo.com {
   reverse_proxy radicale-service:5232
 }
 
