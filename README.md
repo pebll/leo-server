@@ -7,27 +7,8 @@ Currently running:
 
 ## Landing Page
 
-TODO
+Runs on uvicorn in a docker container on Port 8000
 
 ## CardDAV Server
 
-The server runs on Port 5232
-
-User: pebll
-Password: lel (temporary)
-
-### Setup steps ran on server:
-
-- Install Radicale and Apache2 (for password)
-`sudo apt update`
-`sudo apt install radicale apache2-utils`
-- Setup config
-`cp ~/leo-server/CardDAV/config /etc/radicale/config`
-- Create a new user (enter password twice)
-`sudo htpasswd -B -c /etc/radicale/users pebll`
-- Create storage folder and grant rights
-`sudo mkdir -p /var/lib/radicale/collections`
-`sudo chown -R radicale:radicale /var/lib/radicale/collections`
-- Restart radicale
-`sudo systemctl restart radicale`
-
+The server runs in a docker container on Port 5232
