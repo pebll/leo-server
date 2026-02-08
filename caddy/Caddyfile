@@ -1,0 +1,13 @@
+léo.com {
+  handle /calavera/* {
+    reverse_proxy calavera-server-service:9080
+  }
+  handle {
+    reverse_proxy website-service:8000
+  }
+}
+
+radicale.léo.com {
+  reverse_proxy radicale-service:5232
+}
+
