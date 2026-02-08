@@ -1,5 +1,6 @@
 léo.com {
   handle /calavera/* {
+    uri strip_prefix /calavera
     reverse_proxy calavera-server-service:9080
   }
   handle {
