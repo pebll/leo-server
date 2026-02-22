@@ -1,15 +1,21 @@
 services:
-  uvicorn-service:
+  website:
     container_name: website-service
     build:
       context: ./website
       network: host
       dockerfile: Dockerfile
-    ports:
-      - '8000:8000'
     networks:
       - backend
-  reverse-proxy-service:
+  calavera-server:
+    container_name: calavera-server-service
+    build:
+      context: ./calavera-server/
+      network: host
+      dockerfile: Dockerfile
+    networks:
+      - backend
+  caddy:
     container_name: caddy-service
     image: caddy
     restart: always
@@ -19,7 +25,7 @@ services:
     volumes:
       - caddy-config:/config
       - caddy-data:/data
-      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
     networks:
       - backend
   radicale:
