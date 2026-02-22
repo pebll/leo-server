@@ -15,6 +15,16 @@ services:
       dockerfile: Dockerfile
     networks:
       - backend
+  elo-estimator:
+    container_name: elo-estimator-website-service
+    build:
+      context: ./elo-estimator/
+      network: host
+      dockerfile: Dockerfile
+    volumes:
+      - ./elo-estimator/elo-estimator/web/data/:/app/web/data
+    networks:
+      - backend
   caddy:
     container_name: caddy-service
     image: caddy
