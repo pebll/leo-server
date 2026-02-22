@@ -6,7 +6,7 @@ léo.com {
     reverse_proxy calavera-server-service:9080
   }
 
-  handle /elo-estimator/* {
+  handle /elo-estimator* {
     uri strip_prefix /elo-estimator
     reverse_proxy elo-estimator-website-service:5000
   }
