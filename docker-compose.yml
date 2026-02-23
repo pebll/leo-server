@@ -23,8 +23,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "127.0.0.1:5000:5000"
-    environment:
-      - URL_PREFIX=/elo-estimator
     volumes:
       - ./elo-estimator/elo-estimator/web/data/:/app/web/data
     networks:
