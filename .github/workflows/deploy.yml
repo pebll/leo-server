@@ -17,5 +17,5 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd ~/leo-server
-            git pull
+            git pull --recurse-submodules
             docker compose up --build -d
