@@ -1,5 +1,6 @@
 léo.com {
   redir /game https://pebll.itch.io/calavera 301
+  redir /stammtisch https://g14p.github.io/oc-z10/ 301
 
   handle /calavera/* {
     uri strip_prefix /calavera
