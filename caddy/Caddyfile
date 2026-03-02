@@ -10,6 +10,10 @@ léo.com {
     reverse_proxy elo-estimator-website-service:5000
   }
 
+  handle /spriteslicer* {
+      reverse_proxy spriteslicer-website-service:5173
+    }
+
   handle {
     reverse_proxy website-service:8000
   }
