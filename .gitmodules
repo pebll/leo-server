@@ -1,0 +1,6 @@
+[submodule "elo-estimator/elo-estimator"]
+	path = elo-estimator/elo-estimator
+	url = git@github.com:pebll/elo-estimator.git
+[submodule "spriteslicer/spriteslicer"]
+	path = spriteslicer/spriteslicer
+	url = git@github.com:pebll/spriteslicer.git

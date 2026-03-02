@@ -8,7 +8,7 @@ Runs the caddy image in docker container and routes all requests only through po
 
 ## Landing page (website-service)
 
-A very simple landing page (saying "Hi Leo")
+A very simple static landing page
 Has its own Dockerfile installing python and uvicorn
 Runs uvicorn in a docker container on Port 8000
 
@@ -22,3 +22,10 @@ The server runs a radicale image in a docker container on Port 5232
 This is running the godot server for the calavera game
 Has its own very simple Dockerfile just running the executable.
 The server runs on port 9080
+
+## Elo estimator (elo-estimator-website-service)
+
+This is the vibe coded elo-estimator. It calls stockfish on the server machine, so its not static!
+Runs on port 5000
+
+

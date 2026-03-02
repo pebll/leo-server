@@ -15,6 +15,28 @@ services:
       dockerfile: Dockerfile
     networks:
       - backend
+  elo-estimator:
+    container_name: elo-estimator-website-service
+    build:
+      context: ./elo-estimator/
+      network: host
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./elo-estimator/elo-estimator/web/data/:/app/web/data
+    networks:
+      - backend
+  spriteslicer:
+    container_name: spriteslicer-website-service
+    build:
+      context: ./spriteslicer/
+      network: host
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5173:5173"
+    networks:
+    - backend
   caddy:
     container_name: caddy-service
     image: caddy

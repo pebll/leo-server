@@ -1,1 +1,140 @@
-<html><body><h1>Hi Leo</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Léo.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        .intro {
+            color: #999;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        .tools {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tool-card {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: all 0.2s;
+            border: 1px solid #2a2a2a;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .tool-card:hover {
+            background: #222;
+            border-color: #3a3a3a;
+            transform: translateX(5px);
+        }
+
+        .tool-emoji {
+            font-size: 2.5em;
+            flex-shrink: 0;
+        }
+
+        .tool-content {
+            flex: 1;
+        }
+
+        .tool-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .tool-desc {
+            color: #888;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .tool-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome 👋</h1>
+        
+        <p class="intro">
+          Hi, welcome to my website. It's still quite work in progress, but here are two of my (vibe-coded) tools: they are very useful and cool, but they have a specific purpose:
+        </p>
+
+        <div class="tools">
+            <a href="/elo-estimator" class="tool-card">
+                <span class="tool-emoji">♟️</span>
+                <div class="tool-content">
+                    <div class="tool-title">Chess ELO Estimator</div>
+                    <div class="tool-desc">
+                        Analyzes your Lichess games with AI to estimate your playing level (you are secretly better than your elo!)
+                    </div>
+                </div>
+            </a>
+
+            <a href="/spriteslicer" class="tool-card">
+                <span class="tool-emoji">✂️</span>
+                <div class="tool-content">
+                    <div class="tool-title">Spriteslicer</div>
+                    <div class="tool-desc">
+                        Slice sprite sheets visually without needing to know paddings or sprite sizes (pro tip: perfect for AI generated sprite sheets!)
+                    </div>
+                </div>
+            </a>
+
+            <a href="/game" class="tool-card">
+                <span class="tool-emoji">👺 </span>
+                <div class="tool-content">
+                    <div class="tool-title">Calavera</div>
+                    <div class="tool-desc">
+                      Calavera is a cool 1v1 online multiplayer turn based game made for a game jam. Defeat your opponent by find out where his kind hides (pro tip: don't get stabbed!)
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
