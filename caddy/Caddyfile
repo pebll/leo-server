@@ -1,6 +1,7 @@
 léo.com {
   redir /game https://pebll.itch.io/calavera 301
-  redir /stammtisch https://g14p.github.io/oc-z10/ 301
+  redir /stammtisch https://stammtafel.github.io/oc-z10/ 301
+  redir /spriteslicer /spriteslicer/ 308
 
   handle /calavera/* {
     uri strip_prefix /calavera
@@ -9,10 +10,6 @@ léo.com {
 
   handle /elo-estimator* {
     reverse_proxy elo-estimator-website-service:5000
-  }
-
-  handle /spriteslicer {
-    redir /spriteslicer/ 308
   }
 
   handle /spriteslicer* {
