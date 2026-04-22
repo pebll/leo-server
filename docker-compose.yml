@@ -37,6 +37,16 @@ services:
       - "127.0.0.1:5173:5173"
     networks:
     - backend
+  kitkurs:
+    container_name: kitkurs-website-service
+    build:
+      context: ./kitkurs/
+      network: host
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:7777:7777"
+    networks:
+    - backend
   caddy:
     container_name: caddy-service
     image: caddy
