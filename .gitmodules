@@ -4,3 +4,6 @@
 [submodule "spriteslicer/spriteslicer"]
 	path = spriteslicer/spriteslicer
 	url = git@github.com:pebll/spriteslicer.git
+[submodule "kitkurs/kitkurs"]
+	path = kitkurs/kitkurs
+	url = git@github.com:pebll/kitkurs.git
