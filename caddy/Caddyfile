@@ -17,6 +17,7 @@ léo.com {
     }
 
   handle /kitkurs* {
+      uri strip_prefix /kitkurs
       reverse_proxy kitkurs-website-service:7777
     }
 
