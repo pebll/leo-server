@@ -17,7 +17,7 @@ léo.com {
     }
 
   handle /kitkurs* {
-      reverse_proxy kikurs-website-service:7777
+      reverse_proxy kitkurs-website-service:7777
     }
 
   handle {
