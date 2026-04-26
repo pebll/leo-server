@@ -7,3 +7,6 @@
 [submodule "kitkurs/kitkurs"]
 	path = kitkurs/kitkurs
 	url = git@github.com:pebll/kitkurs.git
+[submodule "insterleague/insterfreestyle-league"]
+	path = insterleague/insterfreestyle-league
+	url = git@github.com:pebll/insterfreestyle-league.git

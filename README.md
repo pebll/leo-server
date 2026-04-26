@@ -32,3 +32,8 @@ Runs on port 5000
 
 This is the vibe coded kitkurs. It uses python.
 Runs on port 7777
+
+## Insterleague (insterleague-service)
+
+This is the vibe coded website for the chess Insterleague.
+Runs on port 3000

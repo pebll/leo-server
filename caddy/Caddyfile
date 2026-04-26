@@ -21,6 +21,12 @@ léo.com {
       reverse_proxy kitkurs-website-service:7777
     }
 
+  handle /insterleague* {
+      uri strip_prefix /insterleague
+      reverse_proxy insterleague-website-service:3000
+    }
+
+
   handle {
     reverse_proxy website-service:8000
   }

@@ -47,6 +47,18 @@ services:
       - "127.0.0.1:7777:7777"
     networks:
     - backend
+  insterleague:
+    container_name: insterleague-website-service
+    build:
+      context: ./insterleague/
+      network: host
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./tournament-data.json:/app/tournament-data.json
+    networks:
+    - backend
   caddy:
     container_name: caddy-service
     image: caddy
