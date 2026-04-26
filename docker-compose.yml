@@ -56,7 +56,7 @@ services:
     ports:
       - "127.0.0.1:3000:3000"
     volumes:
-      - ./tournament-data.json:/app/tournament-data.json
+      - ./insterleague/tournament-data.json:/app/tournament-data.json
     networks:
     - backend
   caddy:
