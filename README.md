@@ -28,4 +28,12 @@ The server runs on port 9080
 This is the vibe coded elo-estimator. It calls stockfish on the server machine, so its not static!
 Runs on port 5000
 
+## Kitkurs (kitkurs-service)
 
+This is the vibe coded kitkurs. It uses python.
+Runs on port 7777
+
+## Insterleague (insterleague-service)
+
+This is the vibe coded website for the chess Insterleague.
+Runs on port 3000

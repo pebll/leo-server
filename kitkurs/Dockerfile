@@ -8,4 +8,4 @@ RUN chmod +x start.sh
 
 EXPOSE 7777
 
-CMD ["sh", "start.sh"]
+CMD ["python3", "-m", "http.server", "7777", "-d", "web_visu"]

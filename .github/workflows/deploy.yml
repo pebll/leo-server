@@ -18,4 +18,4 @@ jobs:
           script: |
             cd ~/leo-server
             git pull --recurse-submodules
-            docker compose up --build -d
+            docker compose up -d
