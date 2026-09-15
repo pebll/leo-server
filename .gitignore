@@ -3,4 +3,5 @@ insterleague/tournament-data.json
 **/__pycache__/**
 **/.venv/
 website/.venv/
+elo-estimator/.env
 
