@@ -84,5 +84,15 @@
       "analysis"
     ],
     "url": "https://lichess.org/@/lucaistschlecht/blog/how-much-elo-does-an-ai-model-think-you-have/SdavBTLW"
+  },
+  {
+    "slug": "global-game-jam-2026-calavera",
+    "title": "Global Game Jam 2026 - Calavera",
+    "date": "2026-02-14",
+    "tags": [
+      "gamedev",
+      "networking"
+    ],
+    "file": "posts/global-game-jam-2026-calavera.md"
   }
 ]
