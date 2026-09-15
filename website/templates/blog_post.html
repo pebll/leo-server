@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} — Léo.com</title>
+    <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+    <div class="blog-shell">
+        <nav class="blog-nav">
+            <a href="/" title="Home" aria-label="Home"><span class="nav-emoji">🏠</span> Home</a>
+            <a href="/blog" title="Blog" aria-label="Blog"><span class="nav-emoji">✍️</span> Blog</a>
+        </nav>
+
+        <article class="blog-post">
+            <h1>{{ title }}</h1>
+            <div class="blog-meta">
+                <time datetime="{{ date }}">{{ date | eu_date }}</time>
+                {% if tags %}
+                    <div class="blog-tags">
+                        {% for tag in tags %}
+                            <span class="blog-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            {{ content | safe }}
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "my-first-blogpost",
+    "title": "My first blogpost!",
+    "date": "2026-09-15",
+    "tags": [
+      "short"
+    ],
+    "file": "posts/my-first-blogpost.md"
+  },
+  {
+    "slug": "lichess-lessons-learned-part-5",
+    "title": "Lessons Learned - Part 5",
+    "date": "2026-07-07",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-5/ha2liGHb"
+  },
+  {
+    "slug": "lichess-lessons-learned-part-4",
+    "title": "Lessons Learned - Part 4",
+    "date": "2026-07-03",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-4/rvQPBTwg"
+  },
+  {
+    "slug": "lichess-lessons-learned-part-3",
+    "title": "Lessons Learned - Part 3",
+    "date": "2026-07-01",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-3/5rbX9sOk"
+  },
+  {
+    "slug": "lichess-lessons-learned-part-2",
+    "title": "Lessons Learned - Part 2",
+    "date": "2026-06-26",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-2/DMY8PQPI"
+  },
+  {
+    "slug": "lichess-lessons-learned-part-1",
+    "title": "Lessons Learned - Part 1",
+    "date": "2026-06-24",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-1/tOxVtyT5"
+  },
+  {
+    "slug": "lichess-how-much-elo-does-an-ai-model-think-you-have",
+    "title": "How much elo does an AI model think you have?",
+    "date": "2026-03-22",
+    "tags": [
+      "lichess",
+      "chess",
+      "analysis"
+    ],
+    "url": "https://lichess.org/@/lucaistschlecht/blog/how-much-elo-does-an-ai-model-think-you-have/SdavBTLW"
+  }
+]

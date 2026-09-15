@@ -1,6 +1,10 @@
 # server connection requirements
 uvicorn
 fastapi
+jinja2
 # api communication reqs
 pydantic
 python-multipart
+# blog
+markdown
+python-frontmatter
