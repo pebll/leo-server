@@ -64,6 +64,17 @@
     "url": "https://lichess.org/@/lucaistschlecht/blog/lessons-learned-part-1/tOxVtyT5"
   },
   {
+    "slug": "radicale",
+    "title": "Radicale",
+    "date": "2026-06-15",
+    "tags": [
+      "self-hosting",
+      "thunderbird",
+      "docker"
+    ],
+    "file": "posts/radicale.md"
+  },
+  {
     "slug": "lichess-how-much-elo-does-an-ai-model-think-you-have",
     "title": "How much elo does an AI model think you have?",
     "date": "2026-03-22",
