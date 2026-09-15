@@ -1,5 +1,6 @@
 radicale/data
 insterleague/tournament-data.json
 **/__pycache__/**
-.venv
+**/.venv/
+website/.venv/
 

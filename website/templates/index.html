@@ -69,6 +69,7 @@
 
         .tool-content {
             flex: 1;
+            min-width: 0;
         }
 
         .tool-title {
@@ -83,15 +84,141 @@
             font-size: 0.95em;
         }
 
+        /* Blog card — same family, a bit larger + accent outline */
+        .blog-card {
+            position: relative;
+            align-items: flex-start;
+            padding: 28px;
+            border-color: #4a3f35;
+            background: #161311;
+            box-shadow: 0 0 0 1px rgba(196, 149, 106, 0.18);
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            background: #1c1814;
+            border-color: #6a5748;
+            transform: translateX(5px);
+        }
+
+        .blog-card-hit {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            border-radius: inherit;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .blog-card .tool-emoji {
+            font-size: 2.75em;
+            margin-top: 2px;
+        }
+
+        .blog-card .tool-title {
+            font-size: 1.4em;
+            margin-bottom: 6px;
+        }
+
+        .blog-card .tool-desc {
+            margin-bottom: 16px;
+        }
+
+        .blog-posts {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid #2a2420;
+            padding-top: 4px;
+        }
+
+        .blog-post-link {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 6.25rem 1fr;
+            gap: 10px;
+            align-items: baseline;
+            text-decoration: none;
+            color: inherit;
+            padding: 10px 0;
+            border-bottom: 1px solid #221e1a;
+            transition: color 0.15s;
+        }
+
+        .blog-post-link:last-child {
+            border-bottom: none;
+            padding-bottom: 2px;
+        }
+
+        .blog-post-link:hover .blog-post-title {
+            color: #e8ddd4;
+        }
+
+        .blog-post-date {
+            font-size: 0.8em;
+            color: #6e6258;
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .blog-post-title-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .blog-post-title {
+            font-size: 0.95em;
+            color: #b8a99a;
+            line-height: 1.35;
+        }
+
+        .blog-new {
+            font-size: 0.65em;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #1c1714;
+            background: #c4956a;
+            padding: 2px 6px;
+            border-radius: 3px;
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        .blog-empty {
+            color: #6e6258;
+            font-size: 0.9em;
+            border-top: 1px solid #2a2420;
+            padding-top: 14px;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.8em;
             }
-            
+
             .tool-card {
                 flex-direction: column;
                 text-align: center;
                 gap: 15px;
+            }
+
+            .blog-card {
+                text-align: left;
+            }
+
+            .blog-card .tool-emoji {
+                align-self: center;
+            }
+
+            .blog-post-link {
+                grid-template-columns: 5.5rem 1fr;
+                text-align: left;
             }
         }
     </style>
@@ -99,12 +226,44 @@
 <body>
     <div class="container">
         <h1>Welcome 👋</h1>
-        
+
         <p class="intro">
           Hi, welcome to my website. It's still quite work in progress, but here are some of my available tools and games, have fun!
         </p>
 
         <div class="tools">
+            <div class="tool-card blog-card">
+                <a class="blog-card-hit" href="/blog">Blog</a>
+                <span class="tool-emoji">✍️</span>
+                <div class="tool-content">
+                    <div class="tool-title">Blog</div>
+                    <div class="tool-desc">
+                        Projects, ideas, and random thoughts.
+                    </div>
+                    {% if posts %}
+                        <ul class="blog-posts">
+                            {% for post in posts[:3] %}
+                                <li>
+                                    <a
+                                        class="blog-post-link"
+                                        href="{% if post.url %}{{ post.url }}{% else %}/blog/{{ post.slug }}{% endif %}"
+                                        {% if post.url %}target="_blank" rel="noopener noreferrer"{% endif %}
+                                    >
+                                        <span class="blog-post-date">{{ post.date | eu_date }}</span>
+                                        <span class="blog-post-title-row">
+                                            <span class="blog-post-title">{{ post.title }}</span>
+                                            {% if post.is_new %}<span class="blog-new">New</span>{% endif %}
+                                        </span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="blog-empty">No posts yet — check back soon.</p>
+                    {% endif %}
+                </div>
+            </div>
+
             <a href="/elo-estimator" class="tool-card">
                 <span class="tool-emoji">♟️</span>
                 <div class="tool-content">
@@ -146,7 +305,7 @@
             </a>
 
             <a href="/stammtisch" class="tool-card">
-                <span class="tool-emoji">🪑 </span>
+                <span class="tool-emoji">🪑</span>
                 <div class="tool-content">
                     <div class="tool-title">Stammtisch</div>
                     <div class="tool-desc">
@@ -156,7 +315,7 @@
             </a>
 
             <a href="/game" class="tool-card">
-                <span class="tool-emoji">👺 </span>
+                <span class="tool-emoji">👺</span>
                 <div class="tool-content">
                     <div class="tool-title">Calavera</div>
                     <div class="tool-desc">
@@ -166,7 +325,7 @@
             </a>
 
             <a href="https://daem-on.itch.io/holosaur" class="tool-card">
-                <span class="tool-emoji">🦖 </span>
+                <span class="tool-emoji">🦖</span>
                 <div class="tool-content">
                     <div class="tool-title">Holosaur</div>
                     <div class="tool-desc">
