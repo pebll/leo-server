@@ -1,5 +1,15 @@
 [
   {
+    "slug": "wg-gefunden",
+    "title": "WG Gefunden!",
+    "date": "2026-10-03",
+    "tags": [
+      "project",
+      "software"
+    ],
+    "file": "posts/wg-gefunden.md"
+  },
+  {
     "slug": "my-first-blogpost",
     "title": "My first blogpost!",
     "date": "2026-09-15",
