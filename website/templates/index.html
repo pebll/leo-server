@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/static/lion.svg">
     <title>Léo.com</title>
     <style>
         * {
@@ -22,6 +23,11 @@
         .container {
             max-width: 650px;
             margin: 0 auto;
+        }
+
+        .logo {
+            display: block;
+            margin-bottom: 15px;
         }
 
         h1 {
@@ -225,6 +231,7 @@
 </head>
 <body>
     <div class="container">
+        <img class="logo" src="/static/lion.svg" alt="Lion logo" width="64" height="64">
         <h1>Welcome 👋</h1>
 
         <p class="intro">
@@ -300,6 +307,16 @@
                     <div class="tool-title">Insterfreestyle League</div>
                     <div class="tool-desc">
                       The website to track the chess Insterfreestyle league.
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://wgg.léo.com" class="tool-card">
+                <span class="tool-emoji">🏠</span>
+                <div class="tool-content">
+                    <div class="tool-title">WG Gefunden!</div>
+                    <div class="tool-desc">
+                      A smart WG Gesucht scraper that scores offers (with a bit of AI) and emails you when a great one shows up.
                     </div>
                 </div>
             </a>

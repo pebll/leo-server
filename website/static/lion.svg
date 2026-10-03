@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g fill="#c8641e">
+    <circle cx="32" cy="32" r="26"/>
+    <circle cx="32" cy="7" r="7"/>
+    <circle cx="32" cy="57" r="7"/>
+    <circle cx="7" cy="32" r="7"/>
+    <circle cx="57" cy="32" r="7"/>
+    <circle cx="14.3" cy="14.3" r="7"/>
+    <circle cx="49.7" cy="14.3" r="7"/>
+    <circle cx="14.3" cy="49.7" r="7"/>
+    <circle cx="49.7" cy="49.7" r="7"/>
+  </g>
+  <circle cx="20" cy="19" r="5" fill="#f2b84b"/>
+  <circle cx="44" cy="19" r="5" fill="#f2b84b"/>
+  <circle cx="20" cy="19" r="2.5" fill="#c8641e"/>
+  <circle cx="44" cy="19" r="2.5" fill="#c8641e"/>
+  <circle cx="32" cy="34" r="17" fill="#f2b84b"/>
+  <circle cx="25.5" cy="30" r="2.2" fill="#2b1a0e"/>
+  <circle cx="38.5" cy="30" r="2.2" fill="#2b1a0e"/>
+  <ellipse cx="32" cy="41" rx="7.5" ry="5.5" fill="#fbe3b0"/>
+  <path d="M28.5 37.5h7l-3.5 4z" fill="#2b1a0e"/>
+  <path d="M32 41.5v2.5M32 44c-1.5 1.6-3.5 1.6-4.5 0.4M32 44c1.5 1.6 3.5 1.6 4.5 0.4" stroke="#2b1a0e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+</svg>
