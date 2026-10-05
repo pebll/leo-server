@@ -30,7 +30,8 @@ Runs on port 5000
 
 ## Kitkurs (kitkurs-service)
 
-This is the vibe coded kitkurs. It uses python.
+This is the vibe coded kitkurs. It uses python (`server.py`: static files + account API).
+User accounts are stored in SQLite at `kitkurs/data/kitkurs.db` (mounted volume, not in git).
 Runs on port 7777
 
 ## Insterleague (insterleague-service)

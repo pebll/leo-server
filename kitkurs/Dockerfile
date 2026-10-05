@@ -2,10 +2,9 @@ FROM python:3.11-alpine
 WORKDIR /app
 
 COPY ./kitkurs/web_visu/ ./web_visu/
-COPY ./kitkurs/start.sh .
-
-RUN chmod +x start.sh
+COPY ./kitkurs/server.py .
 
 EXPOSE 7777
 
-CMD ["python3", "-m", "http.server", "7777", "-d", "web_visu"]
+# Serves the static app plus the account API; accounts live in /app/data (volume)
+CMD ["python3", "server.py", "7777", "--db", "/app/data/kitkurs.db"]

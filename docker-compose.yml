@@ -47,6 +47,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "127.0.0.1:7777:7777"
+    volumes:
+      - ./kitkurs/data:/app/data
     networks:
     - backend
   insterleague:
