@@ -1,5 +1,15 @@
 [
   {
+    "slug": "braids",
+    "title": "braids",
+    "date": "2026-10-31",
+    "tags": [
+      "project",
+      "software"
+    ],
+    "file": "posts/braids.md"
+  },
+  {
     "slug": "wg-gefunden",
     "title": "WG Gefunden!",
     "date": "2026-10-03",
